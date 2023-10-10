@@ -1,5 +1,12 @@
 def find_min_and_max(arr):
-    return ''
+    if not arr:
+        return "Array is empty"
+
+    min_val, min_index = min((val, idx) for idx, val in enumerate(arr))
+    max_val, max_index = max((val, idx) for idx, val in enumerate(arr))
+
+    return f"min: {min_val} index: {min_index} max: {max_val} index: {max_index}"
+
 
 if __name__ == "__main__":
     print(find_min_and_max([5, 7, 4, -2, -1, 8]))
